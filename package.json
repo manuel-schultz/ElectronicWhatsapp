@@ -1,0 +1,16 @@
+{
+  "name": "electronicwhatsapp",
+  "version": "1.0.0",
+  "description": "A WhatsApp Client made with Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "WhatsApp",
+    "Messager",
+    "Electron"
+  ],
+  "author": "Manuel Schultz",
+  "license": "ISC"
+}
