@@ -1,0 +1,10 @@
+{
+    "dest": "release-builds/",
+    "icon": "img/iconsizes/96x96.png",
+    "categories": [
+        "Network"
+    ],
+    "lintianOverrides": [
+        "changelog-file-missing-in-native-package"
+    ]
+}

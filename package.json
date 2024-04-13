@@ -1,16 +1,39 @@
 {
   "name": "electronicwhatsapp",
   "version": "1.0.0",
-  "description": "A WhatsApp Client made with Electron.",
+  "description": "Just another WhatsApp Client made with Electron.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-data": "electron-packager . electronicwhatsapp --overwrite --asar=true --platform=linux --arch=x64 --icon=img/iconsizes/96x96.png --prune=true --out=release-builds",
+    "create-tar": "build --dir",
+    "create-deb": "electron-installer-debian --src release-builds/electronicwhatsapp-linux-x64/ --arch amd64 --config debian.json"
   },
   "keywords": [
     "WhatsApp",
     "Messager",
     "Electron"
   ],
-  "author": "Manuel Schultz",
-  "license": "ISC"
+  "author": "Manuel Schultz <manuel@schultz.ch>",
+  "homepage": "https://github.com/manuel-schultz/ElectronicWhatsapp",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "16.0.4",
+    "electron-packager": "^15.5.2"
+  },
+  "build": {
+    "appId": "com.example.electronicwhatsapp",
+    "productName": "ElectronicWhatsApp",
+    "linux": {
+      "category": "Social",
+      "packageCategory": "social",
+      "icon": "img/iconsizes",
+      "maintainer": "Manuel Schultz <manuel@schultz.ch>",
+      "target": [ "deb" ],
+      "synopsis": "A WhatsApp Client"
+    },
+    "deb": {
+
+    }
+  }
 }
